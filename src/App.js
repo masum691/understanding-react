@@ -2,6 +2,7 @@
 // import { useState } from 'react';
 import {useEffect, useState} from 'react';
 import './App.css';
+import Cosmetics from './components/Cosmetics/Cosmetics';
 import Device from './components/Device/Device'
 
 
@@ -19,6 +20,7 @@ function App() {
       <Device name="samsung" price="22332" steps={steps} />
       <h3>My Steps: {steps}</h3>
       <button onClick={handleWalk}>Walk</button>
+      <Cosmetics></Cosmetics>
     </div>
   );
 }
