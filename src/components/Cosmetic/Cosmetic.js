@@ -1,17 +1,26 @@
 import React from 'react';
+import './Cosmetic.css'
+import { addToDb } from '../../utilities/fakedb';
 
 const Cosmetic = (props) => {
     // console.log(props.cosmetic)
-    const {name, age, gender, email, company, balance} = props.cosmetic;
+    const {_id, name, age, gender, email, company, balance} = props.cosmetic;
+    const handlePurchase = id => {
+        // set to local storage
+        console.log(id)
+        addToDb(id)
+    }
+    // const withParam = (id) => handlePurchase(id)
     return (
-        <div>
-            <h4>Name: {name}</h4>
-            <h5>Name: {age}</h5>
-            <h5>Name: {gender}</h5>
-            <h5>Name: {email}</h5>
-            <h5>Name: {company}</h5>
-            <h4>Name: {balance}</h4>
-
+        <div className="cosmetic">
+            <p style={{color: 'yellow'}}>Id: {_id}</p>
+            <h2 className="name">Name: {name}</h2>
+            <h4>Age: {age}</h4>
+            <h4>Gender: {gender}</h4>
+            <h4>Email: {email}</h4>
+            <h4>Company: {company}</h4>
+            <h3>Balance: {balance}</h3>
+            <button onClick={ () => handlePurchase(_id)}>Purchase</button>
         </div>
     );
 };

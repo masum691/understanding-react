@@ -1,0 +1,12 @@
+.cosmetic{
+    color: white;
+    background-color: rgba(23, 94, 199, 0.877);
+    width: 400px;
+    margin: 20px auto;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 10px 10px 30px gray;
+}
+.cosmetic h2.name{
+    color: rgb(2, 238, 238);
+}
