@@ -16,7 +16,7 @@ function App() {
   }, [steps])
   return (
     <div className="App">
-      <Device name="samsung" price="22332" />
+      <Device name="samsung" price="22332" steps={steps} />
       <h3>My Steps: {steps}</h3>
       <button onClick={handleWalk}>Walk</button>
     </div>
