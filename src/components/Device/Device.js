@@ -7,7 +7,6 @@ const Device = (props) => {
             <h1>My name {props.name}</h1>
             <h4>Current steps: {props.steps}</h4>
             <Config price={props.price} steps={props.steps} />
-            
         </div>
     );
 };
